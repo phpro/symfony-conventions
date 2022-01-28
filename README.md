@@ -26,11 +26,9 @@ parameters:
         - vendor
         - config
         - tests/bootstrap.php
-        - Tests/bootstrap.php
         - src/Kernel.php
     phpstan.ignore:
         - "tests/"
-        - "Tests/"
         - "vendor/"
         - "var/"
         - "src/Migrations/"
