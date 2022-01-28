@@ -1,0 +1,72 @@
+parameters:
+    phpstan.config: "vendor/phpro/conventions/phpstan.neon"
+    phpstan.level: 2
+    phpcsfixer2.config: "vendor/phpro/conventions/.php_cs.dist"
+    phpparser.ignore:
+        - vendor
+        - config
+        - tests/bootstrap.php
+        - Tests/bootstrap.php
+        - src/Kernel.php
+    phpstan.ignore:
+        - "tests/"
+        - "Tests/"
+        - "vendor/"
+        - "var/"
+        - "src/Migrations/"
+        - "spec/"
+grumphp:
+    stop_on_failure: true
+    tasks:
+        paratest:
+            metadata:
+                priority: 100
+        yamllint:
+            parse_custom_tags: true
+            metadata:
+                priority: 200
+        composer:
+            strict: false
+            no_check_publish: true
+            metadata:
+                priority: 200
+        phpparser:
+            ignore_patterns: "%phpparser.ignore%"
+            visitors:
+                no_exit_statements: ~
+                never_use_else: ~
+                forbidden_function_calls:
+                    blacklist: [var_dump, echo, print, dump, print_r, phpinfo]
+            metadata:
+                priority: 200
+        git_commit_message:
+            allow_empty_message: false
+            enforce_capitalized_subject: false
+            enforce_no_subject_trailing_period: true
+            enforce_single_lined_subject: false
+            max_body_width: 9999
+            max_subject_width: 9999
+            matchers:
+                jira_commit: /^(INC|SFFEAT|DFCT)\d*[\s\/].*(\n.+)*?/
+            case_insensitive: true
+            multiline: true
+            additional_modifiers: ''
+            metadata:
+                priority: 300
+        phpstan:
+            level: "%phpstan.level%"
+            configuration: "%phpstan.config%"
+            ignore_patterns: "%phpstan.ignore%"
+            metadata:
+                priority: 200
+        phpcsfixer2:
+            config: "%phpcsfixer2.config%"
+            config_contains_finder: true
+            metadata:
+                priority: 200
+        securitychecker_roave:
+            jsonfile: ./composer.json
+            lockfile: ./composer.lock
+            run_always: true
+            metadata:
+                priority: 200

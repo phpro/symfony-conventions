@@ -1,0 +1,28 @@
+{
+    "name": "phpro/conventions",
+    "description": "Common symfony rules for GrumPHP",
+    "type": "library",
+    "license": "propriatary",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "brianium/paratest": "*",
+        "friendsofphp/php-cs-fixer": "^2.18.2",
+        "nikic/php-parser": "^4.3",
+        "phpro/grumphp": "^1.4",
+        "phpstan/phpstan": "^0.12.3",
+        "phpunit/phpunit": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "suggest": {
+        "roave/security-advisories": "Required to run the security check"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    }
+}
