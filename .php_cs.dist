@@ -8,7 +8,7 @@ return PhpCsFixer\Config::create()
                 getcwd().'/tests',
             ])
             ->exclude([
-                'src/Migrations/*',
+                'migrations/*',
             ])
     )
     ->setRiskyAllowed(true)

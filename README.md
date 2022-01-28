@@ -47,6 +47,6 @@ parameters:
         - "tests/"
         - "vendor/"
         - "var/"
-        - "src/Migrations/"
+        - "migrations/"
         - "spec/"
 ```

@@ -11,7 +11,7 @@ parameters:
         - "tests/"
         - "vendor/"
         - "var/"
-        - "src/Migrations/"
+        - "migrations/"
         - "spec/"
 grumphp:
     stop_on_failure: true
