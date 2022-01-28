@@ -4,11 +4,11 @@ return PhpCsFixer\Config::create()
     ->setFinder(
         \Symfony\Component\Finder\Finder::create()
             ->in([
-                __DIR__.'/src',
-                __DIR__.'/tests',
+                getcwd().'/src',
+                getcwd().'/tests',
             ])
             ->exclude([
-                'Infrastructure/Erp/Soap/Services',
+                'src/Migrations/*',
             ])
     )
     ->setRiskyAllowed(true)
@@ -83,5 +83,25 @@ return PhpCsFixer\Config::create()
         'void_return' => true,
         'yoda_style' => true,
         'single_line_throw' => false,
+        'concat_space' => true,
+        'no_alias_functions' => true,
+        'return_type_declaration' => true,
+        'phpdoc_to_return_type' => true,
+        'no_unused_imports' => true,
+        'trim_array_spaces' => true,
+        'no_superfluous_phpdoc_tags' => true,
+        'no_empty_phpdoc' => true,
+        'phpdoc_trim' => true,
+        'phpdoc_separation' => true,
+        'no_whitespace_in_blank_line' => true,
+        'no_extra_blank_lines' => true,
+        'phpdoc_summary' => true,
+        'phpdoc_no_package' => true,
+        'phpdoc_align' => true,
+        'phpdoc_to_comment' => true,
+        'no_blank_lines_after_class_opening' => true,
+        'phpdoc_trim_consecutive_blank_line_separation' => true,
+        'linebreak_after_opening_tag' => false, // allows for <?php declare(strict_types=1);
+        'blank_line_after_opening_tag' => false, // allows for <?php declare(strict_types=1);
     ])
 ;

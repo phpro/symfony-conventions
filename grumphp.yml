@@ -1,16 +1,14 @@
 parameters:
     phpstan.config: "vendor/phpro/conventions/phpstan.neon"
-    phpstan.level: 2
+    phpstan.level: 'max'
     phpcsfixer2.config: "vendor/phpro/conventions/.php_cs.dist"
     phpparser.ignore:
         - vendor
         - config
         - tests/bootstrap.php
-        - Tests/bootstrap.php
         - src/Kernel.php
     phpstan.ignore:
         - "tests/"
-        - "Tests/"
         - "vendor/"
         - "var/"
         - "src/Migrations/"
@@ -47,7 +45,7 @@ grumphp:
             max_body_width: 9999
             max_subject_width: 9999
             matchers:
-                jira_commit: /^(INC|SFFEAT|DFCT)\d*[\s\/].*(\n.+)*?/
+                jira_commit: /^.*$/
             case_insensitive: true
             multiline: true
             additional_modifiers: ''

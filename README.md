@@ -20,7 +20,7 @@ These parameters can be overridden in your local grumphp file
 ```yaml
 parameters:
     phpstan.config: "vendor/phpro/conventions/phpstan.neon"
-    phpstan.level: 2
+    phpstan.level: 'max''
     phpcsfixer2.config: "vendor/phpro/conventions/.php_cs.dist"
     phpparser.ignore:
         - vendor
