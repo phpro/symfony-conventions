@@ -7,9 +7,9 @@
     "prefer-stable": true,
     "require": {
         "brianium/paratest": "*",
-        "friendsofphp/php-cs-fixer": "^2.18.2",
+        "friendsofphp/php-cs-fixer": "^3.5",
         "nikic/php-parser": "^4.3",
-        "phpro/grumphp": "^1.4",
+        "phpro/grumphp-shim": "^1.5",
         "phpstan/phpstan": "^0.12.3",
         "phpunit/phpunit": "*"
     },
