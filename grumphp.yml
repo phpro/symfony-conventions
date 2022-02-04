@@ -1,7 +1,7 @@
 parameters:
     phpstan.config: "vendor/phpro/conventions/phpstan.neon"
     phpstan.level: 'max'
-    phpcsfixer.config: "vendor/phpro/conventions/.php-cs-fixer.dist.php"
+    phpcsfixer.config: "vendor/phpro/conventions/.php-cs-fixer.php"
     phpparser.ignore:
         - vendor
         - config
