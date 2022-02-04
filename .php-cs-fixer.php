@@ -17,7 +17,7 @@ return (new \PhpCsFixer\Config())
         '@Symfony' => true,
         'align_multiline_comment' => true,
         'array_indentation' => true,
-        'blank_line_after_opening_tag' => false, // allows for <?php declare(strict_types=1);
+        'blank_line_after_opening_tag' => true,
         'class_attributes_separation' => ['elements' =>['property' => 'only_if_meta', 'const' => 'only_if_meta']],
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
@@ -35,7 +35,7 @@ return (new \PhpCsFixer\Config())
         'general_phpdoc_annotation_remove' => false,
         'header_comment' => false,
         'heredoc_to_nowdoc' => false,
-        'linebreak_after_opening_tag' => false, // allows for <?php declare(strict_types=1);
+        'linebreak_after_opening_tag' => true,
         'list_syntax' => ['syntax' => 'short'],
         'mb_str_functions' => true,
         'method_chaining_indentation' => true,
