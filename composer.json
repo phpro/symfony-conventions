@@ -8,7 +8,6 @@
     "require": {
         "composer-plugin-api": "^2.1",
         "brianium/paratest": "*",
-        "nikic/php-parser": "^4.3",
         "php-cs-fixer/shim": "^3.6",
         "phpro/grumphp-shim": "^1.5",
         "phpstan/extension-installer": "^1.1",
