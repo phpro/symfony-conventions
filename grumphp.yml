@@ -1,18 +1,3 @@
-parameters:
-    phpstan.config: "vendor/phpro/conventions/phpstan.neon"
-    phpstan.level: 'max'
-    phpcsfixer2.config: "vendor/phpro/conventions/.php_cs.dist"
-    phpparser.ignore:
-        - vendor
-        - config
-        - tests/bootstrap.php
-        - src/Kernel.php
-    phpstan.ignore:
-        - "tests/"
-        - "vendor/"
-        - "var/"
-        - "migrations/"
-        - "spec/"
 grumphp:
     stop_on_failure: true
     tasks:
@@ -28,23 +13,19 @@ grumphp:
             no_check_publish: true
             metadata:
                 priority: 200
-        phpparser:
-            ignore_patterns: "%phpparser.ignore%"
-            visitors:
-                no_exit_statements: ~
-                never_use_else: ~
-                forbidden_function_calls:
-                    blacklist: [var_dump, echo, print, dump, print_r, phpinfo]
-            metadata:
-                priority: 200
         phpstan:
-            level: "%phpstan.level%"
-            configuration: "%phpstan.config%"
-            ignore_patterns: "%phpstan.ignore%"
+            level: "max"
+            configuration: "phpstan.neon"
+            ignore_patterns:
+                - "tests/"
+                - "vendor/"
+                - "var/"
+                - "migrations/"
+                - "spec/"
             metadata:
                 priority: 200
         phpcsfixer2:
-            config: "%phpcsfixer2.config%"
+            config: ".php_cs.php"
             config_contains_finder: true
             metadata:
                 priority: 200

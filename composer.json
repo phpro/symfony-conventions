@@ -1,20 +1,30 @@
 {
     "name": "phpro/conventions",
     "description": "Common symfony rules for GrumPHP",
-    "type": "library",
+    "type": "composer-plugin",
     "license": "propriatary",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "composer-plugin-api": "^2.1",
         "brianium/paratest": "*",
-        "friendsofphp/php-cs-fixer": "^2.18.2",
         "nikic/php-parser": "^4.3",
-        "phpro/grumphp": "^1.4",
-        "phpstan/phpstan": "^0.12.3",
-        "phpunit/phpunit": "*"
+        "php-cs-fixer/shim": "^3.6",
+        "phpro/grumphp-shim": "^1.5",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "*",
+        "slowprog/composer-copy-file": "^0.3.3",
+        "symplify/phpstan-rules": "^10.1"
     },
     "require-dev": {
+        "composer/composer": "^2.2",
         "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHProConventions\\": "src"
+        }
     },
     "suggest": {
         "roave/security-advisories": "Required to run the security check"
@@ -24,5 +34,8 @@
             "*": "dist"
         },
         "sort-packages": true
+    },
+    "extra": {
+        "class": "PHProConventions\\Composer\\PhproConventionsPlugin"
     }
 }

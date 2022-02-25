@@ -1,2 +1,4 @@
 parameters:
-  ignoreErrors: []
+    ignoreErrors: []
+includes:
+    - vendor/symplify/phpstan-rules/packages/object-calisthenics/config/object-calisthenics-rules.neon
