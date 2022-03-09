@@ -1,40 +1,39 @@
 {
     "name": "phpro/conventions",
     "description": "Common symfony rules for GrumPHP",
-    "type": "composer-plugin",
-    "license": "propriatary",
-    "minimum-stability": "dev",
+    "type": "package",
+    "license": "MIT",
     "prefer-stable": true,
     "require": {
-        "composer-plugin-api": "^2.1",
-        "brianium/paratest": "*",
-        "php-cs-fixer/shim": "^3.6",
-        "phpro/grumphp-shim": "^1.5",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan": "^1.4",
-        "phpunit/phpunit": "*",
-        "slowprog/composer-copy-file": "^0.3.3",
-        "symplify/phpstan-rules": "^10.1"
-    },
-    "require-dev": {
-        "composer/composer": "^2.2",
-        "roave/security-advisories": "dev-master"
-    },
-    "autoload": {
-        "psr-4": {
-            "PHProConventions\\": "src"
-        }
+        "brianium/paratest": "^6.3",
+        "php-cs-fixer/shim": "^3.7",
+        "phpro/grumphp-shim": "^1.9",
+        "phpunit/phpunit": "^9.5"
     },
     "suggest": {
-        "roave/security-advisories": "Required to run the security check"
+        "vimeo/psalm": "Static analysis",
+        "psalm/plugin-symfony": "Static analysis",
+        "phpstan/phpstan": "Static analysis",
+        "roave/security-advisories": "Security",
+        "symplify/phpstan-rules": "Object calisthenics"
     },
     "config": {
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpro/grumphp-shim": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
-        "class": "PHProConventions\\Composer\\PhproConventionsPlugin"
+        "class": "PHProConventions\\Composer\\PhproConventionsPlugin",
+        "grumphp": {
+            "disable-plugin": true
+        }
+    },
+    "require-dev": {
+        "azjezz/psl": "^1.9"
     }
 }

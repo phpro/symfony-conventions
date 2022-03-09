@@ -1,0 +1,59 @@
+parameters:
+    commit_project_names: ""
+    stop_on_first_failure: false
+    run_phpstan: false
+    run_psalm: false
+    run_security_advisories: false
+    grumhp_exec_command: kevin app php
+    phpstan.level: "max"
+    phpstan.ignore:
+        - "tests/"
+        - "Tests/"
+        - "vendor/"
+        - "var/"
+        - "src/Migrations/"
+        - "spec/"
+grumphp:
+    stop_on_failure: "%stop_on_first_failure%"
+    git_hook_variables:
+        EXEC_GRUMPHP_COMMAND: "%grumhp_exec_command%"
+    fixer:
+        enabled: true
+        fix_by_default: true
+    tasks:
+        paratest: ~
+        yamllint:
+            parse_custom_tags: true
+        composer:
+            strict: false
+            no_check_publish: true
+        git_commit_message:
+            allow_empty_message: false
+            enforce_capitalized_subject: false
+            enforce_no_subject_trailing_period: true
+            enforce_single_lined_subject: false
+            max_body_width: 9999
+            max_subject_width: 9999
+            matchers:
+                jira_commit: '/^%commit_project_names%-\d*[\s\/].*(\n.+)*?/'
+            case_insensitive: true
+            multiline: true
+            additional_modifiers: ''
+        psalm:
+            metadata:
+                enabled: "%run_psalm%"
+        phpstan:
+            level: "%phpstan.level%"
+            configuration: "phpstan.neon"
+            ignore_patterns: "%phpstan.ignore%"
+            metadata:
+                enabled: "%run_phpstan%"
+        phpcsfixer:
+            config: ".php-cs-fixer.php"
+            config_contains_finder: true
+        securitychecker_roave:
+            jsonfile: ./composer.json
+            lockfile: ./composer.lock
+            run_always: true
+            metadata:
+                enabled: "%run_security_advisories%"

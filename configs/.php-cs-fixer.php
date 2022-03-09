@@ -1,15 +1,14 @@
 <?php
 
-use Symfony\Component\Finder\Finder;
-
 return (new PhpCsFixer\Config())
     ->setFinder(
-        Finder::create()
+        (new PhpCsFixer\Finder())
             ->in([
                 getcwd().'/src',
                 getcwd().'/tests',
             ])
             ->exclude([
+                'var',
                 'migrations/*',
             ])
     )
@@ -20,7 +19,6 @@ return (new PhpCsFixer\Config())
         'align_multiline_comment' => true,
         'array_indentation' => true,
         'blank_line_after_opening_tag' => true,
-        'class_attributes_separation' => ['elements' =>['property' => 'only_if_meta', 'const' => 'only_if_meta']],
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'comment_to_phpdoc' => true,
@@ -50,7 +48,7 @@ return (new PhpCsFixer\Config())
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
         'no_superfluous_elseif' => true,
-        'no_superfluous_phpdoc_tags' => true,
+        'no_superfluous_phpdoc_tags' => false,
         'no_unreachable_default_argument_value' => true,
         'no_useless_else' => true,
         'no_useless_return' => true,
@@ -70,7 +68,8 @@ return (new PhpCsFixer\Config())
         'phpdoc_add_missing_param_annotation' => true,
         'phpdoc_order' => true,
         'phpdoc_order_by_value' => true,
-        'phpdoc_to_return_type' => true,
+        'phpdoc_to_return_type' => false,
+        'phpdoc_to_comment' => false,
         'phpdoc_types_order' => false,
         'pow_to_exponentiation' => true,
         'psr_autoloading' => true,
@@ -84,4 +83,4 @@ return (new PhpCsFixer\Config())
         'ternary_to_null_coalescing' => true,
         'void_return' => true,
     ])
-;
+    ;

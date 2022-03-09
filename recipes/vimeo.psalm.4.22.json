@@ -1,0 +1,45 @@
+{
+    "WARNING": "This file is auto-generated and may only be changed by computers!",
+    "manifests": {
+        "vimeo/psalm": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "configs/psalm.xml": "psalm.xml"
+                }
+            },
+            "files": {
+                "configs/psalm.xml": {
+                    "contents": [
+                        "<?xml version=\"1.0\"?>",
+                        "<psalm",
+                        "    errorLevel=\"1\"",
+                        "    phpVersion=\"8.1\"",
+                        "    resolveFromConfigFile=\"true\"",
+                        "    checkForThrowsDocblock=\"false\"",
+                        "    checkForThrowsInGlobalScope=\"false\"",
+                        "    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "    xmlns=\"https://getpsalm.org/schema/config\"",
+                        "    xsi:schemaLocation=\"https://getpsalm.org/schema/config ../vendor/vimeo/psalm/config.xsd\"",
+                        ">",
+                        "    <projectFiles>",
+                        "        <directory name=\"src\"/>",
+                        "        <ignoreFiles>",
+                        "            <directory name=\"config\"/>",
+                        "            <directory name=\"tests\"/>",
+                        "            <directory name=\"var\"/>",
+                        "            <directory name=\"vendor\"/>",
+                        "        </ignoreFiles>",
+                        "    </projectFiles>",
+                        "    <plugins>",
+                        "        <pluginClass class=\"Psalm\\SymfonyPsalmPlugin\\Plugin\"/>",
+                        "    </plugins>",
+                        "</psalm>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "441be1d75359d33c7b53f674426ab09a7d851ad5"
+        }
+    }
+}

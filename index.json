@@ -1,0 +1,22 @@
+{
+    "WARNING": "This file is auto-generated and may only be changed by computers!",
+    "recipes": {
+        "phpro/conventions": [
+            "*",
+            "1.0"
+        ],
+        "phpstan/phpstan": [
+            "1.4"
+        ],
+        "vimeo/psalm": [
+            "4.22"
+        ]
+    },
+    "branch": "flex",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/veewee/conventions",
+        "origin_template": "{package}:{version}@github.com/veewee/conventions:flex",
+        "recipe_template": "https://api.github.com/repos/veewee/conventions/contents/recipes/{package_dotted}.{version}.json?ref=flex"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "WARNING": "This file is auto-generated and may only be changed by computers!",
+    "manifests": {
+        "phpstan/phpstan": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "configs/phpstan.neon": "phpstan.neon"
+                }
+            },
+            "files": {
+                "configs/phpstan.neon": {
+                    "contents": [
+                        "parameters:",
+                        "    ignoreErrors: []",
+                        "includes:",
+                        "    - vendor/symplify/phpstan-rules/packages/object-calisthenics/config/object-calisthenics-rules.neon",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15f734e77c59c3063f0d690094eced652d7fc5c8"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+imports:
+    - { resource: vendor/phpro/conventions/grumphp-convention.yml }
+parameters:
+    # Project preferences
+    commit_project_names: "(A|B|C)" # The prefix(es) of the jira project.
+    run_phpstan: false # Enable after installing the phpstan preset
+    run_psalm: false # Enable after installing the psalm preset
+    run_security_advisories: false # Enable after installing the security advisories preset
+
+    # Personal preferences
+    stop_on_first_failure: false
