@@ -6,6 +6,7 @@ parameters:
     run_security_advisories: false
     grumhp_exec_command: kevin app php
     phpstan.level: "max"
+    phpunit.parallel: true
     phpstan.ignore:
         - "tests/"
         - "Tests/"
@@ -13,6 +14,8 @@ parameters:
         - "var/"
         - "src/Migrations/"
         - "spec/"
+    yaml.ignore:
+        - 'docker-compose.yml'
 grumphp:
     stop_on_failure: "%stop_on_first_failure%"
     git_hook_variables:
@@ -21,9 +24,15 @@ grumphp:
         enabled: true
         fix_by_default: true
     tasks:
-        paratest: ~
+        phpunit:
+            metadata:
+                enabled: "@=container.getParameter('phpunit.parallel') ? false : true"
+        paratest:
+            metadata:
+                enabled: "%phpunit.parallel%"
         yamllint:
             parse_custom_tags: true
+            ignore_patterns: "%yaml.ignore%"
         composer:
             strict: false
             no_check_publish: true

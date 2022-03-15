@@ -19,6 +19,7 @@
                         "    run_phpstan: false # Enable after installing the phpstan preset",
                         "    run_psalm: false # Enable after installing the psalm preset",
                         "    run_security_advisories: false # Enable after installing the security advisories preset",
+                        "    phpunit.parallel: true # Decide if it is possible to run phpunit tests in parallel or not.",
                         "",
                         "    # Personal preferences",
                         "    stop_on_first_failure: false",
@@ -119,7 +120,7 @@
                     "executable": false
                 }
             },
-            "ref": "dd7925e6ba0fd1dbe6aad5dd3e3a0b86c9127da9"
+            "ref": "b44a63137600dea89be4ac5ed0f7dbd84305174a"
         }
     }
 }
