@@ -1,7 +1,7 @@
 {
     "WARNING": "This file is auto-generated and may only be changed by computers!",
     "manifests": {
-        "phpro/conventions": {
+        "phpro/symfony-conventions": {
             "manifest": {
                 "copy-from-recipe": {
                     "configs/grumphp.yaml": "grumphp.yaml.dist",
@@ -12,7 +12,7 @@
                 "configs/grumphp.yaml": {
                     "contents": [
                         "imports:",
-                        "    - { resource: vendor/phpro/conventions/grumphp-convention.yml }",
+                        "    - { resource: vendor/phpro/symfony-conventions/grumphp-convention.yml }",
                         "parameters:",
                         "    # Project preferences",
                         "    commit_project_names: \"(A|B|C)\" # The prefix(es) of the jira project.",
@@ -119,7 +119,7 @@
                     "executable": false
                 }
             },
-            "ref": "61c243d532b8e492bad2b3826df9b16793937547"
+            "ref": "dd7925e6ba0fd1dbe6aad5dd3e3a0b86c9127da9"
         }
     }
 }

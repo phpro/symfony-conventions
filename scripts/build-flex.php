@@ -58,9 +58,9 @@ $buildIndex = static fn (array $recipes): array => [
     'branch' => $branch,
     'is_contrib' => true,
     '_links' => [
-        'repository' => 'github.com/'.$fork.'/conventions',
-        'origin_template' => '{package}:{version}@github.com/'.$fork.'/conventions:'.$branch,
-        'recipe_template' => 'https://api.github.com/repos/'.$fork.'/conventions/contents/recipes/{package_dotted}.{version}.json?ref='.$branch
+        'repository' => 'github.com/'.$fork.'/symfony-conventions',
+        'origin_template' => '{package}:{version}@github.com/'.$fork.'/symfony-conventions:'.$branch,
+        'recipe_template' => 'https://api.github.com/repos/'.$fork.'/symfony-conventions/contents/recipes/{package_dotted}.{version}.json?ref='.$branch
     ]
 ];
 

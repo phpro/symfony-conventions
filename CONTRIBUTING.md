@@ -18,15 +18,15 @@ FLEX_BRANCH=YOURBRANCH FLEX_FORK=YOURFORK php scripts/build-flex.php
 symfony new conventiontest
 cd conventiontest
 
-composer config repositories.conventions git https://github.com/YOURFORK/conventions.git
+composer config repositories.conventions git https://github.com/YOURFORK/symfony-conventions.git
 
 composer config --json extra.symfony.allow-contrib true
-composer config --json extra.symfony.endpoint '["https://api.github.com/repos/YOURFORK/conventions/contents/index.json?ref=YOURBRANCH", "flex://defaults"]'
+composer config --json extra.symfony.endpoint '["https://api.github.com/repos/YOURFORK/symfony-conventions/contents/index.json?ref=YOURBRANCH", "flex://defaults"]'
 
-composer require --dev phpro/conventions:dev-flex
+composer require --dev phpro/symfony-conventions:YOURBRANCH
 
 # If you want to rerun a recipe:
-composer recipes:install phpro/conventions --force -v
+composer recipes:install phpro/symfony-conventions --force -v
 ```
 
 *Note*: If you add a git repository, you must push changes to the recipes before you can test them.

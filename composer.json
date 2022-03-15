@@ -1,6 +1,6 @@
 {
-    "name": "phpro/conventions",
-    "description": "Common symfony rules for GrumPHP",
+    "name": "phpro/symfony-conventions",
+    "description": "GrumpHP convetions for Symfony projects at PHPro",
     "type": "package",
     "license": "MIT",
     "prefer-stable": true,

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'phpro/conventions' => [
+    'phpro/symfony-conventions' => [
         '*' => [
             'configs/grumphp.yaml' => 'grumphp.yaml.dist',
             'configs/.php-cs-fixer.php' => '.php-cs-fixer.php',

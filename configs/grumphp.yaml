@@ -1,5 +1,5 @@
 imports:
-    - { resource: vendor/phpro/conventions/grumphp-convention.yml }
+    - { resource: vendor/phpro/symfony-conventions/grumphp-convention.yml }
 parameters:
     # Project preferences
     commit_project_names: "(A|B|C)" # The prefix(es) of the jira project.

@@ -1,7 +1,7 @@
 {
     "WARNING": "This file is auto-generated and may only be changed by computers!",
     "recipes": {
-        "phpro/conventions": [
+        "phpro/symfony-conventions": [
             "*",
             "1.0"
         ],
@@ -12,11 +12,11 @@
             "4.22"
         ]
     },
-    "branch": "flex",
+    "branch": "master",
     "is_contrib": true,
     "_links": {
-        "repository": "github.com/veewee/conventions",
-        "origin_template": "{package}:{version}@github.com/veewee/conventions:flex",
-        "recipe_template": "https://api.github.com/repos/veewee/conventions/contents/recipes/{package_dotted}.{version}.json?ref=flex"
+        "repository": "github.com/phpro/symfony-conventions",
+        "origin_template": "{package}:{version}@github.com/phpro/symfony-conventions:master",
+        "recipe_template": "https://api.github.com/repos/phpro/symfony-conventions/contents/recipes/{package_dotted}.{version}.json?ref=master"
     }
 }

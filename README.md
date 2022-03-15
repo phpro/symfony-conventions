@@ -1,4 +1,4 @@
-# Convention checks PHPro
+# GrumpHP Symfony Convention
 
 This package is to be required on all PHPro's symfony based projects.
 
@@ -8,14 +8,14 @@ This package is to be required on all PHPro's symfony based projects.
 
 ```bash
 composer config --json extra.symfony.allow-contrib true
-composer config --json extra.symfony.endpoint '["https://api.github.com/repos/phpro/conventions/contents/index.json", "flex://defaults"]'
-composer require --dev phpro/conventions
+composer config --json extra.symfony.endpoint '["https://api.github.com/repos/phpro/symfony-conventions/contents/index.json", "flex://defaults"]'
+composer require --dev phpro/symfony-conventions
 ```
 
 ### Without symfony/flex
 
 ```bash
-composer require --dev phpro/conventions
+composer require --dev phpro/symfony-conventions
 ```
 
 You can copy the config files from the `configs/` directory to the root of your project.
