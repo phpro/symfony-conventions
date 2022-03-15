@@ -1,10 +1,10 @@
-# GrumpHP Symfony Convention
+# GrumPHP Symfony Convention
 
 This package is to be required on all PHPro's symfony based projects.
 
 ## Installation
 
-### With syfony/flex
+### With symfony/flex
 
 ```bash
 composer config --json extra.symfony.allow-contrib true
