@@ -50,7 +50,7 @@ $buildManifest = static fn (string $package, $files): array => [
 ];
 
 
-$branch = $_SERVER['FLEX_BRANCH'] ?? 'master';
+$branch = $_SERVER['FLEX_BRANCH'] ?? 'main';
 $fork = $_SERVER['FLEX_FORK'] ?? 'phpro';
 
 $buildIndex = static fn (array $recipes): array => [

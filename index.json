@@ -12,11 +12,11 @@
             "4.22"
         ]
     },
-    "branch": "master",
+    "branch": "main",
     "is_contrib": true,
     "_links": {
         "repository": "github.com/phpro/symfony-conventions",
-        "origin_template": "{package}:{version}@github.com/phpro/symfony-conventions:master",
-        "recipe_template": "https://api.github.com/repos/phpro/symfony-conventions/contents/recipes/{package_dotted}.{version}.json?ref=master"
+        "origin_template": "{package}:{version}@github.com/phpro/symfony-conventions:main",
+        "recipe_template": "https://api.github.com/repos/phpro/symfony-conventions/contents/recipes/{package_dotted}.{version}.json?ref=main"
     }
 }
