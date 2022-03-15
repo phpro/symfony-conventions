@@ -2,10 +2,14 @@
 
 return [
     'phpro/symfony-conventions' => [
+        /*
+         * In case you want to test branches: 
+         * 
         '*' => [
             'configs/grumphp.yaml' => 'grumphp.yaml.dist',
             'configs/.php-cs-fixer.php' => '.php-cs-fixer.php',
         ],
+        */
         '1.0' => [
             'configs/grumphp.yaml' => 'grumphp.yaml.dist',
             'configs/.php-cs-fixer.php' => '.php-cs-fixer.php',

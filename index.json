@@ -2,7 +2,6 @@
     "WARNING": "This file is auto-generated and may only be changed by computers!",
     "recipes": {
         "phpro/symfony-conventions": [
-            "*",
             "1.0"
         ],
         "phpstan/phpstan": [
