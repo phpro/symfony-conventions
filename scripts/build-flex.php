@@ -1,10 +1,11 @@
 <?php
 
 use Psl\Collection\Map;
+use Psl\File\WriteMode;
 use function Psl\Dict\reindex;
 use function Psl\Filesystem\read_directory;
-use function Psl\Filesystem\read_file;
-use function Psl\Filesystem\write_file;
+use function Psl\File\read;
+use function Psl\File\write;
 use function Psl\Iter\reduce_with_keys;
 use function Psl\Json\encode;
 use function Psl\Str\replace;
@@ -22,7 +23,7 @@ $configs = new Map(reindex(
 
 
 $placeFileInline = static fn(string $file): array => [
-    'contents' => explode("\n", read_file($file)),
+    'contents' => explode("\n", read($file)),
     'executable' => false,
 ];
 
@@ -68,13 +69,13 @@ $manifestTarget = static fn (string $package, string $version): string =>
     $recipesDir . '/' . replace($package, '/', '.') . '.' . $version . '.json';
 
 $writeJson = static function (string $file, array $contents): void {
-    write_file($file, encode(
+    write($file, encode(
         [
             'WARNING' => 'This file is auto-generated and may only be changed by computers!',
             ...$contents,
         ],
         true
-    ));
+    ), WriteMode::TRUNCATE);
 };
 
 $index = [];

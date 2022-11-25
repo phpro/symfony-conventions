@@ -7,7 +7,7 @@ jobs:
         strategy:
             matrix:
                 operating-system: [ubuntu-latest]
-                php-versions: ['8.1']
+                php-versions: ['8.1', '8.2']
                 composer-options: ['']
                 composer-versions: ['composer:v2']
             fail-fast: false
@@ -31,7 +31,7 @@ jobs:
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
                   restore-keys: ${{ runner.os }}-composer-
             - name: Install dependencies
-              run: composer update --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
+              run: composer update --prefer-dist --no-progress --ignore-platform-req=php+ ${{ matrix.composer-options }}
             - name: Build flex files
               run: php scripts/build-flex.php
             - name: Check if flex files are up to date
