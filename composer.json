@@ -24,7 +24,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "phpro/grumphp-shim": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "symfony/flex": true
         }
     },
     "extra": {
@@ -34,6 +35,6 @@
         }
     },
     "require-dev": {
-        "azjezz/psl": "^1.9"
+        "azjezz/psl": "^2.1"
     }
 }
