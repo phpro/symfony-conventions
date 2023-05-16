@@ -49,6 +49,7 @@ grumphp:
             multiline: true
             additional_modifiers: ''
         psalm:
+            no_cache: true
             metadata:
                 enabled: "%run_psalm%"
         phpstan:
