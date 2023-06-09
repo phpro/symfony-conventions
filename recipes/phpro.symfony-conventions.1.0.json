@@ -50,6 +50,7 @@
                         "        'align_multiline_comment' => true,",
                         "        'array_indentation' => true,",
                         "        'blank_line_after_opening_tag' => true,",
+                        "        'blank_line_between_import_groups' => false,",
                         "        'combine_consecutive_issets' => true,",
                         "        'combine_consecutive_unsets' => true,",
                         "        'comment_to_phpdoc' => true,",
@@ -120,7 +121,7 @@
                     "executable": false
                 }
             },
-            "ref": "b44a63137600dea89be4ac5ed0f7dbd84305174a"
+            "ref": "2e3f94013a1ceed3ca270ca92a9d3240c9dd4cbd"
         }
     }
 }
