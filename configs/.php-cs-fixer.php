@@ -19,6 +19,7 @@ return (new PhpCsFixer\Config())
         'align_multiline_comment' => true,
         'array_indentation' => true,
         'blank_line_after_opening_tag' => true,
+        'blank_line_between_import_groups' => false,
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'comment_to_phpdoc' => true,
