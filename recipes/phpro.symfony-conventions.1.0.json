@@ -75,7 +75,6 @@
                         "        'multiline_whitespace_before_semicolons' => true,",
                         "        'native_function_invocation' => false,",
                         "        'no_alias_functions' => true,",
-                        "        'no_blank_lines_before_namespace' => false,",
                         "        'no_extra_blank_lines' => true,",
                         "        'no_null_property_initialization' => true,",
                         "        'no_php4_constructor' => true,",
@@ -121,7 +120,7 @@
                     "executable": false
                 }
             },
-            "ref": "2e3f94013a1ceed3ca270ca92a9d3240c9dd4cbd"
+            "ref": "cf9cea7b7bed384e61df5472858f35170b28371f"
         }
     }
 }

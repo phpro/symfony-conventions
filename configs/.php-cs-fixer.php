@@ -44,7 +44,6 @@ return (new PhpCsFixer\Config())
         'multiline_whitespace_before_semicolons' => true,
         'native_function_invocation' => false,
         'no_alias_functions' => true,
-        'no_blank_lines_before_namespace' => false,
         'no_extra_blank_lines' => true,
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
