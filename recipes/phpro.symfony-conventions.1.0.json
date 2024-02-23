@@ -113,6 +113,7 @@
                         "        'string_line_ending' => true,",
                         "        'ternary_to_null_coalescing' => true,",
                         "        'void_return' => true,",
+                        "        'nullable_type_declaration_for_default_null_value' => true,",
                         "    ])",
                         "    ;",
                         ""
@@ -120,7 +121,7 @@
                     "executable": false
                 }
             },
-            "ref": "cf9cea7b7bed384e61df5472858f35170b28371f"
+            "ref": "1f1bca2d576942aece315d8e6462a0a1aea8572e"
         }
     }
 }
