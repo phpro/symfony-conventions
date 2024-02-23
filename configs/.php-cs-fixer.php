@@ -82,5 +82,6 @@ return (new PhpCsFixer\Config())
         'string_line_ending' => true,
         'ternary_to_null_coalescing' => true,
         'void_return' => true,
+        'nullable_type_declaration_for_default_null_value' => true,
     ])
     ;
