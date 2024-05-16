@@ -3,7 +3,7 @@ parameters:
     stop_on_first_failure: false
     run_phpstan: false
     run_psalm: false
-    run_security_advisories: false
+    run_security_advisories: true
     grumhp_exec_command: kevin app php
     phpstan.level: "max"
     phpunit.parallel: true
@@ -61,9 +61,7 @@ grumphp:
         phpcsfixer:
             config: ".php-cs-fixer.php"
             config_contains_finder: true
-        securitychecker_roave:
-            jsonfile: ./composer.json
-            lockfile: ./composer.lock
+        securitychecker_composeraudit:
             run_always: true
             metadata:
                 enabled: "%run_security_advisories%"

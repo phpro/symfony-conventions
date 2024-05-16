@@ -30,17 +30,29 @@ composer recipes
 composer recipes:install THE/DEPENDENCY --force -v
 ```
 
-### roave/security-advisories 
-
-```bash
-composer require --dev roave/security-advisories:dev-master
-```
+### composer audit (security-advisories)
 
 ```yaml 
 # grumphp.yaml
 parameters:
     run_security_advisories: true
 ```
+
+You might want to alter the default composer audit configuration in your local composer.json file.
+
+For example if you don't want to fail CI on usage of abandoned packages:
+
+```json
+{
+    "config": {
+        "audit": {
+            "abandoned": "report"
+        }
+    }
+}
+```
+
+[See official docs for more information.](https://getcomposer.org/doc/06-config.md#audit)
 
 ### phpstan/phpstan
 
