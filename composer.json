@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.1",
         "brianium/paratest": "^6.3|^7.0",
-        "php-cs-fixer/shim": "^3.18",
+        "php-cs-fixer/shim": "^3.57",
         "phpro/grumphp-shim": "^2.0",
         "phpunit/phpunit": "^9.5|^10.0"
     },

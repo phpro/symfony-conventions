@@ -44,6 +44,7 @@
                         "            ])",
                         "    )",
                         "    ->setRiskyAllowed(true)",
+                        "    ->setParallelConfig(\\PhpCsFixer\\Runner\\Parallel\\ParallelConfigFactory::detect())",
                         "    ->setRules([",
                         "        '@PSR12' => true,",
                         "        '@Symfony' => true,",
@@ -121,7 +122,7 @@
                     "executable": false
                 }
             },
-            "ref": "1f1bca2d576942aece315d8e6462a0a1aea8572e"
+            "ref": "9f36cadf0e3b4158fbaa6c9c19e6f99931540094"
         }
     }
 }
