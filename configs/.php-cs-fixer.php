@@ -23,7 +23,12 @@ return (new PhpCsFixer\Config())
         'blank_line_between_import_groups' => false,
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
-        'comment_to_phpdoc' => true,
+        'comment_to_phpdoc' => [
+            'ignored_tags' => [
+                'codeCoverageIgnoreStart',
+                'codeCoverageIgnoreEnd',
+            ],
+        ],
         'date_time_immutable' => true,
         'declare_strict_types' => true,
         'doctrine_annotation_array_assignment' => true,
